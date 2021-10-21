@@ -9,8 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkmarx AST GitHub Action
-        uses: Checkmarx/ast-github-action@v0.28
+        uses: Checkmarx/ast-github-action@vmaster
         with:
+          project_name: ${{ github.repository }}
           base_uri: https://ast-master.dev.cxast.net/
           cx_tenant: organization
           cx_client_id: ${{ secrets.CLIENT_ID }}
