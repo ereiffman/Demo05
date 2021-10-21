@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v0.28
       - name: Checkmarx AST CLI Action
-        uses: Checkmarx/ast-github-action@fb1204f30f6e6a985b5ae8dca3e4d70895208958
+        uses: Checkmarx/ast-github-action@
         with:
           project_name: ast-github-tester
           base_uri: https://ast-master.dev.cxast.net/
@@ -18,7 +18,4 @@ jobs:
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }} 
           additional_params: --scan-types sast --file-filter !readme --report-format sarif --output-name results
           
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: results.sarif
+
