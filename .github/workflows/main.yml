@@ -11,7 +11,7 @@ jobs:
       - name: Checkmarx AST GitHub Action
         uses: Checkmarx/ast-github-action@master
         with:
-          project_name: ${{ github.repository }}
+          project_name: ereiffman/Demo05
           base_uri: https://ast-master.dev.cxast.net/
           cx_tenant: organization
           cx_client_id: ${{ secrets.CLIENT_ID }}
