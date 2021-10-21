@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkmarx AST CLI Action
-        uses: Checkmarx/ast-github-action@master
+        uses: Checkmarx/ast-github-action@fb1204f30f6e6a985b5ae8dca3e4d70895208958
         with:
           project_name: ast-github-tester
           base_uri: https://ast-master.dev.cxast.net/
