@@ -16,4 +16,5 @@ jobs:
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.SECRET }}
           project_name: ${{ github.repository }}
+          branch: develop
           additional_params: --tags test1,test2 --scan-types sast,kics
