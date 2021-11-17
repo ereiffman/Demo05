@@ -8,12 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Checkmarx AST GitHub Action
-        uses: Checkmarx/ast-github-action@master
+      - name: Checkmarx AST Github Action
+        uses: Checkmarx/ast-github-action@v0.29
         with:
-          project_name: ${{ github.repository }}
           base_uri: https://ast-master.dev.cxast.net/
           cx_tenant: organization
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.SECRET }}
-          additional_params: --tags test1,test2 
+          project_name: ${{ github.repository }}
+          additional_params: --tags test1,test2 --scan-types sast,kics
